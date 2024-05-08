@@ -1,0 +1,125 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 7, 2024, 12:23:57 PM
+    Author     : ritik
+*/
+* {
+   margin: 0;
+}
+
+.mis_container{
+   width:100%;
+   border: 1px solid black;
+   min-height: 90vh;
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   background-color: #ecfddd;
+}   
+
+.mis_card{
+   border: 1px solid rgb(26, 189, 80);
+   min-height: 70vh;
+   width: 86%;    
+   border-radius: 15px;
+   background-color: rgb(130, 202, 130);
+   display: flex;
+   justify-content: center;
+}
+
+
+.mis_card_report{
+   border: 1px solid rgb(26, 189, 80);
+   min-height: 86vh;
+   width: 98%;    
+   border-radius: 15px;
+   background-color: rgb(130, 202, 130);
+}
+
+
+.grid-container {
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: 10px;
+   grid-gap: 30px;
+   justify-content: center;
+   padding: 30px;
+   margin: 10px;
+ }
+
+
+.mis_product{
+   width: 80%;
+   height: 95px;
+   border: 1px solid rgb(126, 124, 124);
+   border-radius: 15px;
+   margin-left: 40px;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(231, 236, 241);
+   cursor: pointer;
+   font-weight: 600;
+
+   min-width: 150px;
+
+}
+.mis_product:hover {
+   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+ }
+
+
+.flex_viewReport{
+
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-end;
+}
+
+
+ @media screen and (max-width: 768px) {
+   .mis_card{
+       padding-right: 36px;
+   }
+ }
+
+
+ #excelFrame {
+   width: 90%;
+   display: inline-block;
+   height: 500px; /* Adjust height as needed */
+   border: 1px solid #ccc;
+ }
+
+
+ .form_container{
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ /* Admin CSS */
+
+ .labelForAdmin{
+   color: black;
+   font-weight: 900;
+ }
+
+
+ .mis_card_adminView{
+   border: 1px solid rgb(26, 189, 80);
+   min-height: 70vh;
+   width: 40%; 
+   background-color: rgb(130, 202, 130);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

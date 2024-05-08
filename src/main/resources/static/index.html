@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="indexApp">
+<head>
+   <title>MIS Login</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link rel="stylesheet" type="text/css" href="css/util.css">
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+   
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src ="js/index.js"></script>
+
+   </head>
+
+<body ng-controller="indexController">
+   <div class="limiter" ng-show="signInPage">
+       <div class="container-login100">
+           <div class="wrap-login100">
+               <form class="login100-form validate-form" ng-submit="login()">
+                   <span class="login100-form-title p-b-26">
+                       MIS Dashboard
+                   </span>
+                   <span class="login100-form-title p-b-48">
+                       <i class="zmdi zmdi-font"></i>
+                   </span>
+                   <div class="wrap-input100 validate-input">
+                       <input id="login_branchCode"  class="input100" type="text" name="branchCode" placeholder="Branch Code" ng-model="branchCode">
+                   </div>
+                   <div class="wrap-input100 validate-input">
+                       <span class="btn-show-pass">
+                           <i class="zmdi zmdi-eye"></i>
+                       </span>
+                       <input class="input100" id="login_password" type="password" name="pass" placeholder="Password" ng-model="password">
+                      
+                   </div>
+                   <div class="container-login100-form-btn">
+                       <div class="wrap-login100-form-btn">
+                           <div class="login100-form-bgbtn"></div>
+                           <button type="submit" class="login100-form-btn">
+                               Login
+                           </button>
+                       </div>
+                   </div>
+                   <div class="text-center p-t-80">
+                       <span class="txt1">
+                           Don’t have an account?
+                       </span>
+                       <a class="txt2" href="#" ng-click="signupPage()">
+                           Sign Up
+                       </a>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+
+
+   <!-- sign up -->
+   <div class="limiter" ng-show="signUpPage">
+       <div class="container-login100">
+           <div class="wrap-signup100">
+               <form class="signup100-form validate-form" ng-submit="signup()">
+                   <span class="signup100-form-title  p-b-10">
+                       MIS Dashboard
+                   </span>
+                   <span class="login100-form-title p-b-30">
+                       <i class="zmdi zmdi-font"></i>
+                   </span>
+                   <div class="wrap-input100-signup  validate-input" >
+                       <input id="signup_branchCode" class="input100"  type="text" name="branchCode" placeholder="Branch Code" ng-model="branchCode">
+                   </div>
+
+                   <div class="wrap-input100-signup  validate-input">
+                       <input  id="signup_branchName" class="input100 holdforInput" type="text" id="branch-input" 
+                               ng-model="selectedBranch" ng-focus="showDropdown()" ng-blur="hideDropdown()" 
+                               ng-change="filterBranches()" placeholder="Branch Name" required="">
+                
+                       <div id="branch-dropdown">
+                           <a href="#" ng-repeat="branch in filteredBranches"
+                               ng-click="selectBranch(branch)">{{branch}}</a>
+                       </div>
+                   </div>
+
+                   <div class="wrap-input100-signup  validate-input" >
+                       <span class="btn-show-pass">
+                           <i class="zmdi zmdi-eye"></i>
+                       </span>
+                       <input id="signup_password" class="input100 holdforInput" type="password" 
+                              name="pass" placeholder="Password" ng-model="password" required="">
+                   </div>
+                   <div class="wrap-input100-signup  validate-input" >
+                       <span class="btn-show-pass">
+                           <i class="zmdi zmdi-eye"></i>
+                       </span>
+                       <input id="signup_confirmPassword" class="input100  focus-input100 " type="password" 
+                              name="pass" placeholder="Confirm Password" ng-model="confirmPassword" required="">
+                   </div>
+                   <div class="container-login100-form-btn">
+                       <div class="wrap-login100-form-btn">
+                           <div class="login100-form-bgbtn"></div>
+                           <button type="submit" class="login100-form-btn" >
+                               Register
+                           </button>
+                       </div>
+                   </div>
+                   <div class="text-center p-t-16">
+                       <span class="txt1">
+                           Already have an account?
+                       </span>
+                       <a class="txt2" href="#" ng-click="signinPage()">
+                           Sign In
+                       </a>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+   
+</body>
+
+</html>
