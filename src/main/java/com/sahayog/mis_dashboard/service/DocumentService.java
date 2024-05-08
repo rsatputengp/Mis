@@ -25,7 +25,17 @@ public class DocumentService {
 
     // Create operation
     public Document saveDocument(Document document) {
-        return documentRepository.save(document);
+        Document documentData
+                = getDocumentByreportTypeAndDate(document.getReportType(), document.getDate());
+        if (documentData != null) {
+            documentData.setDate(document.getDate());
+            documentData.setReportName(document.getReportName());
+            documentData.setReportType(document.getReportType());
+            documentData.setSheetLink(document.getSheetLink());
+            return documentRepository.save(documentData);
+        } else {
+            return documentRepository.save(document);
+        }
     }
 
     // Retrieve operation
@@ -40,7 +50,7 @@ public class DocumentService {
     public Document getDocumentByreportTypeAndDate(String reportType, String date) {
         List<Document> allDocuments = getAllDocuments();
         for (Document allDocument : allDocuments) {
-            if (allDocument.getReportType().equals(reportType) 
+            if (allDocument.getReportType().equals(reportType)
                     && allDocument.getDate().equals(date)) {
                 return allDocument;
             }

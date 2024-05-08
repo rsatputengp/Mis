@@ -26,6 +26,7 @@ app.controller('adminController', function ($scope, $http) {
             $scope.storeMonthAndYear();
             alert($scope.date);
             $scope.sheetData = {
+                reportName: $scope.selectedReportType,
                 reportType: $scope.selectedReportType,
                 date: $scope.date,
                 sheetLink: $scope.sheetLink
@@ -33,8 +34,12 @@ app.controller('adminController', function ($scope, $http) {
             var URL = $scope.uRl + "documents/save";
             $http.post(URL, $scope.sheetData)
                     .then(function (response) {
-                        alert("Excel Sheet Uploaded Successfully");
-                        location.reload();
+                        if (response.data === "") {
+                            alert("Excel Sheet Uploaded Successfully");
+                        } else {
+                            alert("Excel Sheet Uploaded Successfully");
+                            location.reload();
+                        }
                     }, function (error) {
                         console.log(error);
                     });
