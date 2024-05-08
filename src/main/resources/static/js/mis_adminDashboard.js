@@ -34,12 +34,8 @@ app.controller('adminController', function ($scope, $http) {
             var URL = $scope.uRl + "documents/save";
             $http.post(URL, $scope.sheetData)
                     .then(function (response) {
-                        if (response.data === "") {
-                            alert("Excel Sheet Uploaded Successfully");
-                        } else {
-                            alert("Excel Sheet Uploaded Successfully");
-                            location.reload();
-                        }
+                        alert("Excel Sheet Uploaded Successfully");
+                        location.reload();
                     }, function (error) {
                         console.log(error);
                     });
