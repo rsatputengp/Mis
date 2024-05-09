@@ -15,7 +15,8 @@ and open the template in the editor.
 
 body,html {
    height: 100%;
-   font-family: Poppins-Regular,sans-serif
+   font-family: Poppins-Regular,sans-serif;
+   background-color: #ecfddd;
 }
 
 a {
@@ -171,7 +172,7 @@ iframe {
    justify-content: center;
    align-items: center;
    padding: 15px;
-   background: #f2f2f2
+   /*background: #f2f2f2*/
 }
 
 
@@ -189,7 +190,7 @@ iframe {
    padding: 77px 55px 33px;
    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.7);
    -o-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -ms-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1)
 }
@@ -349,10 +350,10 @@ iframe {
    width: 300%;
    height: 100%;
    background: #a64bf4;
-   background: -webkit-linear-gradient(right,#21d4fd,#b721ff,#21d4fd,#b721ff);
-   background: -o-linear-gradient(right,#21d4fd,#b721ff,#21d4fd,#b721ff);
-   background: -moz-linear-gradient(right,#21d4fd,#b721ff,#21d4fd,#b721ff);
-   background: linear-gradient(right,#21d4fd,#b721ff,#21d4fd,#b721ff);
+   background: -webkit-linear-gradient(right,#6A994E,#A7C957,#6A994E,#A7C957);
+   background: -o-linear-gradient(right,#6A994E,#A7C957,#6A994E,#A7C957);
+   background: -moz-linear-gradient(right,#6A994E,#A7C957,#6A994E,#A7C957);
+   background: linear-gradient(right,#6A994E,#A7C957,#6A994E,#A7C957);
    top: 0;
    left: -100%;
    -webkit-transition: all .4s;
