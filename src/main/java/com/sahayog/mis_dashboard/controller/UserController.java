@@ -33,6 +33,14 @@ public class UserController {
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 
+    // Update operation
+    @PutMapping("/update/{id}")
+    public ResponseEntity<MisUser> updateUser(@PathVariable("id") int id,
+            @RequestBody MisUser user) {
+        MisUser updatedUser = service.updateUser(id, user);
+        return new ResponseEntity<>(updatedUser, HttpStatus.OK);
+    }
+
     // Retrieve operations
     @GetMapping("/getallUser")
     public ResponseEntity<List<MisUser>> getAllUsers() {
@@ -48,14 +56,6 @@ public class UserController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-    }
-
-    // Update operation
-    @PutMapping("/update/{id}")
-    public ResponseEntity<MisUser> updateUser(@PathVariable("id") int id,
-            @RequestBody MisUser user) {
-        MisUser updatedUser = service.updateUser(id, user);
-        return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }
 
     // Delete operation
@@ -78,5 +78,11 @@ public class UserController {
     public MisUser getuserDetails(@PathVariable String branchCode,
             @PathVariable String branchName) {
         return service.getUserDetails(branchCode, branchName);
+    }
+    
+    // Get User Details
+    @RequestMapping("/getuserDetails/{branchCode}")
+    public MisUser getuserDetails(@PathVariable String branchCode) {
+        return service.getUserDetails(branchCode);
     }
 }

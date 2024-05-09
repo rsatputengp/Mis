@@ -48,8 +48,18 @@ public class UserService {
 
     // Update operation
     public MisUser updateUser(int id, MisUser user) {
-        user.setId(id);
-        return repository.save(user);
+        MisUser misUser = getUserDetails(user.getBranchCode());
+        if (misUser != null) {
+            try {
+                String encryptPassword = EncryptionDecryption.encryptPassword(user.getPassword());
+                misUser.setPassword(encryptPassword);
+                misUser.setUserIdStatus(user.getUserIdStatus());
+                return repository.save(misUser);
+            } catch (Exception ex) {
+                Logger.getLogger(UserService.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return null;
     }
 
     // Delete operation
@@ -92,6 +102,20 @@ public class UserService {
             List<MisUser> users = repository.findAll();
             for (MisUser user : users) {
                 if (user.getBranchCode().equals(branchCode) || user.getBranchName().equals(branchName)) {
+                    return user;
+                }
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(UserService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    public MisUser getUserDetails(String branchCode) {
+        try {
+            List<MisUser> users = repository.findAll();
+            for (MisUser user : users) {
+                if (user.getBranchCode().equals(branchCode)) {
                     return user;
                 }
             }
