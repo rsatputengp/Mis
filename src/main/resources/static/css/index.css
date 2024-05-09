@@ -206,7 +206,7 @@ iframe {
    padding: 77px 55px 33px;
    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.7);
    -o-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -ms-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1)
 }
@@ -221,7 +221,7 @@ iframe {
    padding: 77px 55px 33px;
    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+   -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.7);
    -o-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -ms-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1)
 }
