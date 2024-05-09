@@ -14,7 +14,7 @@ and open the template in the editor.
 .mis_container{
    width:100%;
    border: 1px solid black;
-   min-height: 90vh;
+   min-height: 88.5vh !important;
    display:flex;
    flex-direction: row;
    justify-content: center;

@@ -35,6 +35,7 @@ angular.module('dashboardApp', [])
                             .then(function (response) {
                                 $scope.sheetLink = response.data.sheetLink;
                                 var excelLink = $scope.sheetLink;
+                                console.log(excelLink);
                                 var embeddedExcel = document.getElementById('embeddedExcel');
 
                                 // // Clear previous content

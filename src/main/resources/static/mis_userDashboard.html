@@ -47,28 +47,28 @@
         <div class="mis_container" ng-show="productView">
             <div class="mis_card ">
                 <div class="grid-container">
-                    <div ng-click="report('SMBG')" class="mis_product">
+        <div ng-click="report('SMBG')" class="mis_product">
                         <a> SMBG</a>
                     </div>
-                    <div ng-click="report('CASA')" class="mis_product">
+        <div ng-click="report('CASA')" class="mis_product">
                         <a>CASA</a>
                     </div>
-                    <div ng-click="report('DD')" class="mis_product">
+        <div ng-click="report('DD')" class="mis_product">
                         <a>DD</a>
                     </div>
-                    <div ng-click="report('FD')" class="mis_product">
+        <div ng-click="report('FD')" class="mis_product">
                         <a>FD</a>
                     </div>
-                    <div ng-click="report('DAM')" class="mis_product">
+        <div ng-click="report('DAM')" class="mis_product">
                         <a>DAM</a>
                     </div>
-                    <div ng-click="report('MIS')" class="mis_product">
+        <div ng-click="report('MIS')" class="mis_product">
                         <a>MIS</a>
                     </div>
-                    <div ng-click="report('NMAB')" class="mis_product">
+        <div ng-click="report('NMAB')" class="mis_product">
                         <a>NMAB</a>
                     </div>
-                    <div ng-click="report('HVT')" class="mis_product">
+        <div ng-click="report('HVT')" class="mis_product">
                         <a>HVT</a>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                 <form ng-submit="getReportData()">
                     <div class="flex_viewReport mt-2 ml-2">
                         <div class="mr-auto">
-                            <h3 class="ml-4  underline-offset-1  text-4xl font-medium text-white inline-block">{{reportTypeForDashboard}} Report</h3>
+              <h3 class="ml-4  underline-offset-1  text-4xl font-medium text-white inline-block">{{reportTypeForDashboard}} Report</h3>
                         </div>
 
                         <div class="mt-3">
@@ -91,7 +91,7 @@
                         <div class="ml-2 mt-2">
 
                             <input style="display: inline-block; width:100%" type="date" class="form-control"
-                                   id="datepicker" name="datepicker" ng-model="uploadDate">
+              id="datepicker" name="datepicker" ng-model="uploadDate">
                         </div>
                         <div class="ml-2 mt-2 mr-3">
                             <button type="submit" style="margin-top: 1px;"
@@ -105,7 +105,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="col-md-12 bg-slate-800 mb-0 text-white bottom-0 mb-0 mt-0 ">
+            <p class="ml-4">
+                ©2024. Sahayog Multi-State Credit Co-operative Society Ltd. – All rights reserved.(PV 1.1)
+            </p>
+        </div>
     </body>
 
 </html>
