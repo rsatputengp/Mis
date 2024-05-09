@@ -43,12 +43,20 @@
                            </button>
                        </div>
                    </div>
-                   <div class="text-center p-t-80">
+                   <div class="text-center p-t-10">
                        <span class="txt1">
                            Don’t have an account?
                        </span>
                        <a class="txt2" href="#" ng-click="signupPage()">
                            Sign Up
+                       </a>
+                   </div>
+                   <div class="text-center">
+                       <span class="txt1">
+                           Forgot Password ?
+                       </span>
+                       <a class="txt2" href="#" ng-click="resetPg()">
+                           Click here
                        </a>
                    </div>
                </form>
@@ -111,6 +119,63 @@
                        </span>
                        <a class="txt2" href="#" ng-click="signinPage()">
                            Sign In
+                       </a>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+   
+   <!-- Reset Password -->
+   <div class="limiter" ng-show="resetPage">
+       <div class="container-login100">
+           <div class="wrap-reset100">
+               <form class="signup100-form validate-form" ng-submit="reset()">
+                   <span class="signup100-form-title  p-b-10">
+                       MIS Dashboard
+                   </span>
+                   <span class="login100-form-title p-b-30">
+                       <i class="zmdi zmdi-font"></i>
+                   </span>
+                   <div class="wrap-input100-signup  validate-input" >
+                       <input id="signup_branchCode" class="input100"  type="text" name="branchCode" placeholder="Branch Code" ng-model="branchCode">
+                   </div>
+                   <div class="wrap-input100-signup  validate-input" >
+                       <span class="btn-show-pass">
+                           <i class="zmdi zmdi-eye"></i>
+                       </span>
+                       <input id="signup_password" class="input100 holdforInput" type="password" 
+                              name="pass" placeholder="Password" ng-model="password" required="">
+                   </div>
+                   <div class="wrap-input100-signup  validate-input" >
+                       <span class="btn-show-pass">
+                           <i class="zmdi zmdi-eye"></i>
+                       </span>
+                       <input id="signup_confirmPassword" class="input100  focus-input100 " type="password" 
+                              name="pass" placeholder="Confirm Password" ng-model="confirmPassword" required="">
+                   </div>
+                   <div class="container-login100-form-btn">
+                       <div class="wrap-login100-form-btn">
+                           <div class="login100-form-bgbtn"></div>
+                           <button type="submit" class="login100-form-btn" >
+                               Reset Password
+                           </button>
+                       </div>
+                   </div>
+                   <div class="text-center p-t-16">
+                       <span class="txt1">
+                           Already have an account?
+                       </span>
+                       <a class="txt2" href="#" ng-click="signinPage()">
+                           Sign In
+                       </a>
+                   </div>
+                   <div class="text-center">
+                       <span class="txt1">
+                           Don’t have an account?
+                       </span>
+                       <a class="txt2" href="#" ng-click="signupPage()">
+                           Sign Up
                        </a>
                    </div>
                </form>

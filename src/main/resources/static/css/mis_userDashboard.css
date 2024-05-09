@@ -117,7 +117,8 @@ and open the template in the editor.
  .mis_card_adminView{
    border: 1px solid rgb(26, 189, 80);
    min-height: 70vh;
-   width: 40%; 
+   /*width: 40%;*/ 
+   min-width: 50vw;
    background-color: rgb(130, 202, 130);
    display: flex;
    justify-content: center;

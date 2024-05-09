@@ -12,6 +12,7 @@ app.controller('indexController', function ($scope, $http, $location) {
 
     $scope.signInPage = true;
     $scope.signUpPage = false;
+    $scope.resetPage = false;
 
 
     $scope.selectedBranch = "";
@@ -57,10 +58,18 @@ app.controller('indexController', function ($scope, $http, $location) {
     $scope.signinPage = function () {
         $scope.signInPage = true;
         $scope.signUpPage = false;
+        $scope.resetPage = false;
     };
 
     $scope.signupPage = function () {
         $scope.signUpPage = true;
+        $scope.signInPage = false;
+        $scope.resetPage = false;
+    };
+
+    $scope.resetPg = function () {
+        $scope.resetPage = true;
+        $scope.signUpPage = false;
         $scope.signInPage = false;
     };
 
@@ -153,11 +162,54 @@ app.controller('indexController', function ($scope, $http, $location) {
 
                             $http.post($scope.uRl + URL, $scope.registrationData)
                                     .then(function (response) {
-                                        alert("Registration Successful");
+                                        alert("Registration Successful.");
                                         location.reload();
                                     }, function (error) {
                                         console.log(error);
                                     });
+                        }
+
+                    },
+                            function (error) {
+                                console.error(error);
+                            });
+        } else {
+            alert("Password and Confirm Password should be match.");
+        }
+    };
+
+
+    $scope.reset = function () {
+        if ($scope.password === $scope.confirmPassword) {
+            debugger;
+
+            var Url = "user/getuserDetails/" + $scope.branchCode;
+            $http.get($scope.uRl + Url)
+                    .then(function (response) {
+                        debugger;
+
+                        $scope.resData = response.data;
+                        if ($scope.resData.branchCode === $scope.branchCode) {
+
+                            $scope.registrationData = {
+                                branchCode: $scope.branchCode,
+                                branchName: $scope.resData.branchName,
+                                password: $scope.password,
+                                userIdStatus: "Pending"
+                            };
+
+                            var URL = "/user/update/" + $scope.resData.id;
+
+                            $http.put($scope.uRl + URL, $scope.registrationData)
+                                    .then(function (response) {
+                                        alert("Password Reset Successful.");
+                                        location.reload();
+                                    }, function (error) {
+                                        console.log(error);
+                                    });
+                        } else {
+                            alert("Branch Code Dose not Exist !");
+                            location.reload();
                         }
 
                     },
