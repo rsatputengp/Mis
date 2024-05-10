@@ -19,12 +19,12 @@ app.controller('adminController', function ($scope, $http) {
         };
         $scope.importExcelLink = function () {
             debugger;
-            alert($scope.uploadDate);
+//            alert($scope.uploadDate);
             $scope.month = '';
             $scope.year = '';
             $scope.date = '';
             $scope.storeMonthAndYear();
-            alert($scope.date);
+//            alert($scope.date);
             $scope.sheetData = {
                 reportName: $scope.selectedReportType,
                 reportType: $scope.selectedReportType,

@@ -20,6 +20,7 @@ and open the template in the editor.
    justify-content: center;
    align-items: center;
    background-color: #ecfddd;
+   border-top: 3px solid #82ca82;
 }   
 
 .mis_card{
@@ -123,4 +124,14 @@ and open the template in the editor.
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+.userName{
+    color: black;
+    font-family: serif;
+    background-color: #ecfddd;
+    border: #82ca82 solid 1.9px;
+    padding: 6px;
+    border-radius: 6px;
+    /*text-decoration: underline;*/
 }

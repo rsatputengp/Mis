@@ -37,8 +37,9 @@
                 <a class="ml-3 text-xl font-semibold text-slate-50 focus:text-slate-50" ng-click="reloadPage()">MIS Dashboard</a>
             </div>
             <div>
+                <span class="userName mr-3 text-sm">User : {{userRecord.branchCode}}</span>
                 <button type="button" ng-click="logout()"
-                        class="mr-3 bg-lime-600 w-24 text-sm p-1 font-semibold text-slate-100 rounded-md border border-gray-500 hover:bg-red-500 logout-button focus:outline-none">Logout</button>
+                        class="mr-3 bg-lime-600 w-24 text-sm p-1 font-semibold text-slate-100 rounded-md border hover:bg-red-500 logout-button focus:outline-none">Logout</button>
             </div>
         </nav>
 
@@ -90,8 +91,8 @@
                 <form ng-submit="getReportData()">
                     <div class="flex_viewReport mt-2 ml-2">
                         <div class="mr-auto">
-                            <h3 class="ml-4  underline-offset-1  text-4xl font-medium text-white inline-block">
-                            {{reportTypeForDashboard}} Report</h3>
+                            <h3 class="ml-4  underline-offset-1  text-4xl font-semibold text-white inline-block font-Roboto">
+                            {{reportTypeForDashboard}} REPORT</h3>
                         </div>
 
                         <div class="mt-3">

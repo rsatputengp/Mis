@@ -41,7 +41,7 @@ a:hover {
    color: -webkit-linear-gradient(left,#21d4fd,#b721ff);
    color: -o-linear-gradient(left,#21d4fd,#b721ff);
    color: -moz-linear-gradient(left,#21d4fd,#b721ff);
-   color: linear-gradient(left,#21d4fd,#b721ff)
+   color: linear-gradient(left,#21d4fd,#b721ff);
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -187,7 +187,7 @@ iframe {
    background: #fff;
    border-radius: 10px;
    overflow: hidden;
-   padding: 77px 55px 33px;
+   padding: 50px 55px 33px;
    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.7);
@@ -198,12 +198,12 @@ iframe {
 
 .wrap-signup100 {
 
-   min-height: 80vh;
+   min-height: 70vh;
    width: 390px;
    background: #fff;
    border-radius: 10px;
    overflow: hidden;
-   padding: 77px 55px 33px;
+   padding: 50px 55px 33px;
    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.7);
@@ -213,12 +213,12 @@ iframe {
 
 .wrap-reset100 {
 
-   min-height: 74vh;
+   min-height: 64vh;
    width: 390px;
    background: #fff;
    border-radius: 10px;
    overflow: hidden;
-   padding: 77px 55px 33px;
+   padding: 50px 55px 33px;
    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
    -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.7);
@@ -386,7 +386,7 @@ iframe {
 
 @media(max-width: 576px) {
    .wrap-login100 {
-       padding:77px 15px 33px;
+       padding:50px 15px 33px;
    }
 }
 

@@ -41,7 +41,8 @@ and open the template in the editor.
             <div class="text-slate-50 cursor-pointer">
                 <a class="ml-3 text-xl font-semibold text-slate-50 focus:text-slate-50">MIS Dashboard</a>
             </div>
-            <div>
+            <div> 
+                <span class="userName mr-3 text-sm">User : {{userRecord.branchCode}}</span>
                 <button type="button" ng-click="logout()"
                         class="mr-3 bg-lime-600 w-24 text-sm p-1 font-semibold text-slate-100 rounded-md border border-gray-500 hover:bg-red-500 logout-button focus:outline-none">Logout</button>
             </div>
