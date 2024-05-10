@@ -38,6 +38,7 @@ public class Document {
     
     private String date;
 
+    @Column(name = "sheetLink", length = 2000)
     private String sheetLink;
     
 
