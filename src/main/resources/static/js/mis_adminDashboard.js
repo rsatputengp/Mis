@@ -19,7 +19,7 @@
                  });
 
          $scope.adminDashView = true;
-         $scope.options = ['SMBG', 'CASA', 'DD', 'FD', 'DAM', 'MIS', 'NMAB', 'HVT'];
+         $scope.options = ['DAILY CH', 'CASA DAILY', 'NMAB', 'CASA STAFFWISE', 'MATURITY TRACKER', 'LIABILITY TARGET VS ACHIEVEMENT', 'DD TRACKER', 'RD SMBG PENDING'];
          // Selecting the first option initially
          $scope.selectedReportType = $scope.options[0].value;
          $scope.storeMonthAndYear = function () {
