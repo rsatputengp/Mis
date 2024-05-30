@@ -221,6 +221,27 @@ td {
     text-wrap: wrap;
 }
 
+.mis-box-name{
+font-size:22px;
+}
+
+.mis-box-name-big{
+font-size:18px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .mis-box-name{
+font-size:14px;
+}
+
+.mis-box-name-big{
+font-size:12px;
+}
+
+    
+}
+
 ::-webkit-scrollbar {   
     width: 6px;
     height: 6px;
