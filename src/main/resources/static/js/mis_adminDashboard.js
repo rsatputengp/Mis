@@ -19,7 +19,8 @@
                  });
 
          $scope.adminDashView = true;
-         $scope.options = ['DAILY CH', 'CASA DAILY', 'NMAB', 'CASA STAFFWISE', 'MATURITY TRACKER', 'LIABILITY TARGET VS ACHIEVEMENT', 'DD TRACKER', 'RD SMBG PENDING'];
+         $scope.options = ['DAILY CH', 'CASA DAILY', 'NMAB', 'CASA STAFFWISE','HVT','MATURITY TRACKER', 'LIABILITY TARGET VS ACHIEVEMENT','RD SMBG PENDING',
+             'SMBG REGULAR','DD REGULAR','DD PENDING','DD TRACKER','BRANCH SCORECARD','BOD/EOD REGULAR'];
          // Selecting the first option initially
          $scope.selectedReportType = $scope.options[0].value;
          $scope.storeMonthAndYear = function () {

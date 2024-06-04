@@ -11,18 +11,118 @@ angular.module('dashboardApp', [])
 
                 $scope.reportTypeForDashboard = "";
                 $scope.reportView = false;
+//                filal
                 $scope.productView = true;
+
+                $scope.reportType = true;
+                $scope.reportSubType = false;
+
+//              sub type report
+                $scope.showCH = false;
+                $scope.showCASA = false;
+                $scope.showMaturity = false;
+                $scope.showTarget = false;
+                $scope.showFDRD = false;
+                $scope.showDD = false;
+                $scope.showOPS = false;
+
+
+
+                $scope.showReportTy = function(mess){
+
+                    $scope.reportType = false;
+                    $scope.reportSubType = true;
+
+                    if (mess === "CH") {
+
+                        $scope.showCH = true;
+                        $scope.showCASA = false;
+                        $scope.showMaturity = false;
+                        $scope.showTarget = false;
+                        $scope.showFDRD = false;
+                        $scope.showDD = false;
+                        $scope.showOPS = false;
+
+                    } else if (mess === "CASA") {
+
+                        $scope.showCH = false;
+                        $scope.showCASA = true;
+                        $scope.showMaturity = false;
+                        $scope.showTarget = false;
+                        $scope.showFDRD = false;
+                        $scope.showDD = false;
+                        $scope.showOPS = false;
+                    } else if (mess === "OPS") {
+                        $scope.showCH = false;
+                        $scope.showCASA = false;
+                        $scope.showMaturity = false;
+                        $scope.showTarget = false;
+                        $scope.showFDRD = false;
+                        $scope.showDD = false;
+                        $scope.showOPS = true;
+                    } else if (mess === "DD") {
+                        $scope.showCH = false;
+                        $scope.showCASA = false;
+                        $scope.showMaturity = false;
+                        $scope.showTarget = false;
+                        $scope.showFDRD = false;
+                        $scope.showDD = true;
+                        $scope.showOPS = false;
+                    } else if (mess === "FD_RD") {
+                        $scope.showCH = false;
+                        $scope.showCASA = false;
+                        $scope.showMaturity = false;
+                        $scope.showTarget = false;
+                        $scope.showFDRD = true;
+                        $scope.showDD = false;
+                        $scope.showOPS = false;
+                    } else if (mess === "TARGET") {
+                        $scope.showCH = false;
+                        $scope.showCASA = false;
+                        $scope.showMaturity = false;
+                        $scope.showTarget = true;
+                        $scope.showFDRD = false;
+                        $scope.showDD = false;
+                        $scope.showOPS = false;
+                    } else if (mess === "MATURITY") {
+                        $scope.showCH = false;
+                        $scope.showCASA = false;
+                        $scope.showMaturity = true;
+                        $scope.showTarget = false;
+                        $scope.showFDRD = false;
+                        $scope.showDD = false;
+                        $scope.showOPS = false;
+
+                    } else {
+                        alert("Something Went Wrong");
+                    }
+
+
+                }
+
+
+
 
                 $scope.report = function (mess) {
                     $scope.reportTypeForDashboard = mess;
                     $scope.reportView = true;
+                    
+                    
                     $scope.productView = false;
+                    $scope.reportType = false;
+                    $scope.reportSubType = false;
 
                 };
+
+
+
+
+
                 $scope.reloadPage = function () {
                     location.reload();
                 };
-                $scope.getReportData = function () { debugger;
+                $scope.getReportData = function () {
+                    debugger;
                     $scope.sheetLink = "";
                     var month = $scope.uploadDate.getMonth() + 1;
                     var date = month.toString() +
