@@ -127,11 +127,12 @@
 //                    var month = $scope.uploadDate.getMonth() + 1;
 //                    var date = month.toString() +
 //                            "-" + $scope.uploadDate.getFullYear().toString();
-                     $scope.day = $scope.uploadDate.getDay();
-                     $scope.month = $scope.uploadDate.getMonth() + 1;
-                     $scope.year = $scope.uploadDate.getFullYear();
+                     var inputdate = new Date($scope.uploadDate);
+                     $scope.day = inputdate.getDate();
+                     $scope.month = inputdate.getMonth() + 1;
+                     $scope.year = inputdate.getFullYear();
                      $scope.date = $scope.day.toString() + "-" + $scope.month.toString() + "-" + $scope.year.toString();
-
+                     alert($scope.date);
                      var URL = "documents/getDocumentByreportTypeAndDate/"
                              + $scope.reportTypeForDashboard + "/" + $scope.date;
 
