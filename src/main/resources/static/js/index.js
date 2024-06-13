@@ -98,7 +98,7 @@ app.controller('indexController', function ($scope, $http, $location) {
                                 alert("Account Successfully Login.");
                             } else {
                                 //User
-                                window.location.href = $scope.uRl + "mis_userDashboard.html";
+                                window.location.href = $scope.uRl + "mis_userDashboard_1.html";
                                 localStorage.setItem("user", JSON.stringify(userRecord));
                                 alert("Account Successfully Login.");
                             }

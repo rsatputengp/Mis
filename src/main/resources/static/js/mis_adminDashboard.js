@@ -17,25 +17,22 @@
                      alert("Report Data Not Found");
                      console.log(error);
                  });
-
+                 
+         $scope.date = "";        
          $scope.adminDashView = true;
          $scope.options = ['DAILY CH', 'CASA DAILY', 'NMAB', 'CASA STAFFWISE','HVT','MATURITY TRACKER', 'LIABILITY TARGET VS ACHIEVEMENT','RD SMBG PENDING',
              'SMBG REGULAR','DD REGULAR','DD PENDING','DD TRACKER','BRANCH SCORECARD','BOD/EOD REGULAR'];
          // Selecting the first option initially
          $scope.selectedReportType = $scope.options[0].value;
          $scope.storeMonthAndYear = function () {
-             $scope.month = $scope.uploadDate.getMonth() + 1; // Adding 1 because getMonth() returns zero-based index (0 for January)
+             $scope.day = $scope.uploadDate.getDay();
+             $scope.month = $scope.uploadDate.getMonth() + 1;
              $scope.year = $scope.uploadDate.getFullYear();
-             $scope.date = $scope.month.toString() + "-" + $scope.year.toString();
+             $scope.date = $scope.day.toString() + "-" + $scope.month.toString() + "-" + $scope.year.toString();
          };
          $scope.importExcelLink = function () {
              debugger;
-//            alert($scope.uploadDate);
-             $scope.month = '';
-             $scope.year = '';
-             $scope.date = '';
              $scope.storeMonthAndYear();
-//            alert($scope.date);
              $scope.sheetData = {
                  reportName: $scope.selectedReportType,
                  reportType: $scope.selectedReportType,
