@@ -25,6 +25,7 @@
                  $scope.showFDRD = false;
                  $scope.showDD = false;
                  $scope.showOPS = false;
+                 $scope.showHR = false;
 
 
 
@@ -33,7 +34,7 @@
                      $scope.reportType = false;
                      $scope.reportSubType = true;
 
-                     if (mess === "CH") {
+                     if (mess === "CH REPORT") {
 
                          $scope.showCH = true;
                          $scope.showCASA = false;
@@ -42,6 +43,7 @@
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = false;
+                         $scope.showHR = false;
 
                      } else if (mess === "CASA") {
 
@@ -52,6 +54,7 @@
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = false;
+                         $scope.showHR = false;
                      } else if (mess === "OPS") {
                          $scope.showCH = false;
                          $scope.showCASA = false;
@@ -60,6 +63,7 @@
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = true;
+                         $scope.showHR = false;
                      } else if (mess === "DD") {
                          $scope.showCH = false;
                          $scope.showCASA = false;
@@ -68,7 +72,8 @@
                          $scope.showFDRD = false;
                          $scope.showDD = true;
                          $scope.showOPS = false;
-                     } else if (mess === "FD_RD") {
+                         $scope.showHR = false;
+                     } else if (mess === "SMBG") {
                          $scope.showCH = false;
                          $scope.showCASA = false;
                          $scope.showMaturity = false;
@@ -76,6 +81,7 @@
                          $scope.showFDRD = true;
                          $scope.showDD = false;
                          $scope.showOPS = false;
+                         $scope.showHR = false;
                      } else if (mess === "TARGET") {
                          $scope.showCH = false;
                          $scope.showCASA = false;
@@ -84,6 +90,7 @@
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = false;
+                         $scope.showHR = false;
                      } else if (mess === "MATURITY") {
                          $scope.showCH = false;
                          $scope.showCASA = false;
@@ -92,8 +99,19 @@
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = false;
+                         $scope.showHR = false;
 
-                     } else {
+                     } else if (mess === "HR") {
+                         $scope.showCH = false;
+                         $scope.showCASA = false;
+                         $scope.showMaturity = false;
+                         $scope.showTarget = false;
+                         $scope.showFDRD = false;
+                         $scope.showDD = false;
+                         $scope.showOPS = false;
+                         $scope.showHR = true;
+
+                     }else {
                          alert("Something Went Wrong");
                      }
 

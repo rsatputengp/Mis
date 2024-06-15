@@ -81,14 +81,14 @@
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">SMBG REGULAR</a>
                     </div>
-                    <div ng-click="report('DD REGULAR')" ng-show="showDD" class="mis_product">
+<!--                    <div ng-click="report('DD REGULAR')" ng-show="showDD" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">DD REGULAR</a>
                     </div>
                     <div ng-click="report('DD PENDING')" ng-show="showDD" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">DD PENDING</a>
-                    </div>
+                    </div>-->
                     <div ng-click="report('DD TRACKER')" ng-show="showDD" class="mis_product">
                         <img src="img/interest-rate (1).png " style="width: 38px; margin-right: 10px;"> <a
                             class="mis-box-name">DD TRACKER</a>
@@ -101,6 +101,10 @@
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">BOD/EOD  REGULAR</a>
                     </div>
+                    <div ng-click="report('HR')" ng-show="showHR" class="mis_product">
+                        <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
+                            class="mis-box-name">HR</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,9 +113,9 @@
         <div class="mis_container" ng-show="reportType" >
             <div class="mis_card ">
                 <div class="grid-container">
-                    <div ng-click="showReportTy('CH')" class="mis_product">
+                    <div ng-click="showReportTy('CH REPORT')" class="mis_product">
                         <img src="img/lottery.png" style="width: 40px; height: 35px; margin-right: 10px;"> <a
-                            class="mis-box-name">CH</a>
+                            class="mis-box-name">CH REPORT</a>
                     </div>
                     <div ng-click="showReportTy('CASA')" class="mis_product">
                         <img src="img/cash-flow.png " style="width: 40px; margin-right: 10px;"> <a
@@ -125,9 +129,9 @@
                         <img src="img/check.png" style="width: 50px; height: 50px; margin-right: 10px;"> <a
                             class="mis-box-name">DD</a>
                     </div>
-                    <div ng-click="showReportTy('FD_RD')" class="mis_product">
+                    <div ng-click="showReportTy('SMBG')" class="mis_product">
                         <img src="img/deposit (5).png " style="width: 38px; margin-right: 10px; margin-left: 4px; "> <a
-                            class="mis-box-name">FD/RD</a>
+                            class="mis-box-name">SMBG</a>
                     </div>
                     <div ng-click="showReportTy('TARGET')" class="mis_product">
                         <img src="img/money.png " style="width: 34px; margin-right: 10px;"> <a
@@ -136,6 +140,10 @@
                     <div ng-click="showReportTy('MATURITY')" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">MATURITY TRACKER</a>
+                    </div>
+                    <div ng-click="showReportTy('HR')" class="mis_product">
+                        <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
+                            class="mis-box-name">HR</a>
                     </div>
                    
                 </div>

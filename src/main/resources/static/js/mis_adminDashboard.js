@@ -21,7 +21,9 @@ app.controller('adminController', function ($scope, $http) {
         $scope.date = "";
         $scope.adminDashView = true;
         $scope.options = ['DAILY CH', 'CASA DAILY', 'NMAB', 'CASA STAFFWISE', 'HVT', 'MATURITY TRACKER', 'LIABILITY TARGET VS ACHIEVEMENT', 'RD SMBG PENDING',
-            'SMBG REGULAR', 'DD REGULAR', 'DD PENDING', 'DD TRACKER', 'BRANCH SCORECARD', 'BOD/EOD REGULAR'];
+            'SMBG REGULAR', 'DD TRACKER', 'BRANCH SCORECARD', 'BOD/EOD REGULAR'];
+//        $scope.options = ['DAILY CH', 'CASA DAILY', 'NMAB', 'CASA STAFFWISE', 'HVT', 'MATURITY TRACKER', 'LIABILITY TARGET VS ACHIEVEMENT', 'RD SMBG PENDING',
+//            'SMBG REGULAR', 'DD REGULAR', 'DD PENDING', 'DD TRACKER', 'BRANCH SCORECARD', 'BOD/EOD REGULAR'];
         // Selecting the first option initially
         $scope.selectedReportType = $scope.options[0].value;
         $scope.storeMonthAndYear = function () {
