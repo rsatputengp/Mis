@@ -94,12 +94,12 @@
                              if (userRecord.branchCode === "Super") {
                                  //Super 
                                  window.location.href = $scope.uRl + "mis_SuperUserDashboard.html";
-                                 localStorage.setItem("user", JSON.stringify(userRecord));
+                                 localStorage.setItem("SuperUser", JSON.stringify(userRecord));
                                  alert("Account Successfully Login.");
                              } else if (userRecord.branchCode === "Admin") {
                                  //Admin 
                                  window.location.href = $scope.uRl + "mis_adminDashboard.html";
-                                 localStorage.setItem("user", JSON.stringify(userRecord));
+                                 localStorage.setItem("AdminUser", JSON.stringify(userRecord));
                                  alert("Account Successfully Login.");
                              } else {
                                  //User

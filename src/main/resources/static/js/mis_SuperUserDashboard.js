@@ -1,7 +1,7 @@
 var app = angular.module('adminApp', [])
 app.controller('adminController', function ($scope, $http) {
 
-    $scope.userRecord = JSON.parse(window.localStorage.getItem("user"));
+    $scope.userRecord = JSON.parse(window.localStorage.getItem("SuperUser"));
     var protocal = window.location.protocol;
     var host = window.location.host;
     $scope.uRl = protocal + "//" + host + "/";

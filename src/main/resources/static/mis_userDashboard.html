@@ -32,13 +32,16 @@
         <!-- navbar -->
         <nav class=" bg-slate-600 flex justify-between items-center h-14 text-black-300 text-lg">
             <div class="text-slate-50 cursor-pointer">
-                <a class="ml-3 text-xl font-semibold text-slate-50 focus:text-slate-50" ng-click="reloadPage()">MIS Dashboard</a>
+
+                <a class="ml-3 text-xl font-semibold text-slate-50 focus:text-slate-50" ng-click="reloadPage()">
+                    <img src="img/MIS Logo 03.png" style="cursor: pointer; width: 86px; height: 44px; margin-left: 20px; margin-top: -25px;" alt=""/>
+                </a>
             </div>
             <div style="display: flex;">
                 <span>
                     <a href="https://sahayogmultistate-my.sharepoint.com/:f:/p/ngp_softwareteam/EoZYYra7nmRLo8B0fiPIUIIB0WxFomlAtYe4rmluXUH24A?e=aLlLDk" target="_blank">
-                        
-                    <img src="img/form.png" style="cursor: pointer; width: 25px; height: 25px; margin-right: 10px; margin-top: 4px;" alt=""/>
+
+                        <img src="img/form.png" style="cursor: pointer; width: 25px; height: 25px; margin-right: 10px; margin-top: 4px;" alt=""/>
                     </a>
                 </span>
                 <span class="userName mr-3 text-sm">User : {{userRecord.branchCode}}</span>
@@ -46,112 +49,112 @@
                         class="mr-3 bg-lime-600 w-24 text-sm p-1 font-semibold text-slate-100 rounded-md border hover:bg-red-500 logout-button focus:outline-none">Logout</button>
             </div>
         </nav>
-        
+
         <!-- SUB-TYPE container -->
         <div class="mis_container ng-hide" ng-show="reportSubType">
             <div class="mis_card ">
                 <div class="grid-container">
-                    <div ng-click="report('DAILY CH')" ng-show="showCH" class="mis_product">
+        <div ng-click="report('DAILY CH')" ng-show="showCH" class="mis_product">
                         <img src="img/lottery.png" style="width: 40px; height: 35px; margin-right: 10px;"> <a
                             class="mis-box-name">DAILY CH</a>
                     </div>
-                    <div ng-click="report('CASA DAILY')" ng-show="showCASA" class="mis_product">
+              <div ng-click="report('CASA DAILY')" ng-show="showCASA" class="mis_product">
                         <img src="img/cash-flow.png " style="width: 40px; margin-right: 10px;"> <a
                             class="mis-box-name">CASA DAILY</a>
                     </div>
-                    <div ng-click="report('NMAB')" ng-show="showCASA" class="mis_product">
+              <div ng-click="report('NMAB')" ng-show="showCASA" class="mis_product">
                         <img src="img/risk.png" style="width: 46px; height: 50px; margin-right: 10px;"> <a
                             class="mis-box-name">NMAB</a>
                     </div>
-                    <div ng-click="report('CASA STAFFWISE')" ng-show="showCASA" class="mis_product">
+              <div ng-click="report('CASA STAFFWISE')" ng-show="showCASA" class="mis_product">
                         <img src="img/check.png" style="width: 50px; height: 50px; margin-right: 10px;"> <a
                             class="mis-box-name">CASA STAFFWISE</a>
                     </div>
-                     <div ng-click="report('HVT')" ng-show="showCASA" class="mis_product">
+        <div ng-click="report('HVT')" ng-show="showCASA" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">HVT</a>
                     </div>
-                    <div ng-click="report('MATURITY TRACKER')" ng-show="showMaturity" class="mis_product">
+        <div ng-click="report('MATURITY TRACKER')" ng-show="showMaturity" class="mis_product">
                         <img src="img/deposit (5).png " style="width: 38px; margin-right: 10px; margin-left: 4px; "> <a
                             class="mis-box-name">MATURITY TRACKER</a>
                     </div>
-                    <div ng-click="report('LIABILITY TARGET VS ACHIEVEMENT')" ng-show="showTarget" class="mis_product">
+        <div ng-click="report('LIABILITY TARGET VS ACHIEVEMENT')" ng-show="showTarget" class="mis_product">
                         <img src="img/money.png " style="width: 34px; margin-right: 10px;"> <a
-                           class="mis-box-name-big">LIABILITY TARGET VS ACHIEVEMENT</a>
+                            class="mis-box-name-big">LIABILITY TARGET VS ACHIEVEMENT</a>
                     </div>
-                    <div ng-click="report('RD SMBG PENDING')" ng-show="showFDRD" class="mis_product">
+        <div ng-click="report('RD SMBG PENDING')" ng-show="showFDRD" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">RD SMBG PENDING</a>
                     </div>
-                    <div ng-click="report('SMBG REGULAR')" ng-show="showFDRD" class="mis_product">
+        <div ng-click="report('SMBG REGULAR')" ng-show="showFDRD" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">SMBG REGULAR</a>
                     </div>
-<!--                    <div ng-click="report('DD REGULAR')" ng-show="showDD" class="mis_product">
-                        <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
-                            class="mis-box-name">DD REGULAR</a>
-                    </div>
-                    <div ng-click="report('DD PENDING')" ng-show="showDD" class="mis_product">
-                        <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
-                            class="mis-box-name">DD PENDING</a>
-                    </div>-->
-                    <div ng-click="report('DD TRACKER')" ng-show="showDD" class="mis_product">
+                    <!--                    <div ng-click="report('DD REGULAR')" ng-show="showDD" class="mis_product">
+                                            <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
+                                                class="mis-box-name">DD REGULAR</a>
+                                        </div>
+                                        <div ng-click="report('DD PENDING')" ng-show="showDD" class="mis_product">
+                                            <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
+                                                class="mis-box-name">DD PENDING</a>
+                                        </div>-->
+        <div ng-click="report('DD TRACKER')" ng-show="showDD" class="mis_product">
                         <img src="img/interest-rate (1).png " style="width: 38px; margin-right: 10px;"> <a
                             class="mis-box-name">DD TRACKER</a>
                     </div>
-                    <div ng-click="report('BRANCH SCORECARD')" ng-show="showOPS" class="mis_product">
+        <div ng-click="report('BRANCH SCORECARD')" ng-show="showOPS" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">BRANCH SCORECARD</a>
                     </div>
-                    <div ng-click="report('BOD/EOD REGULAR')" ng-show="showOPS" class="mis_product">
+        <div ng-click="report('BOD/EOD REGULAR')" ng-show="showOPS" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">BOD/EOD  REGULAR</a>
                     </div>
-                    <div ng-click="report('HR')" ng-show="showHR" class="mis_product">
+        <div ng-click="report('HR')" ng-show="showHR" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">HR</a>
                     </div>
                 </div>
             </div>
         </div>
-                                
+
         <!-- TYPE container -->
         <div class="mis_container" ng-show="reportType" >
             <div class="mis_card ">
                 <div class="grid-container">
-                    <div ng-click="showReportTy('CH REPORT')" class="mis_product">
+        <div ng-click="showReportTy('CH REPORT')" class="mis_product">
                         <img src="img/lottery.png" style="width: 40px; height: 35px; margin-right: 10px;"> <a
                             class="mis-box-name">CH REPORT</a>
                     </div>
-                    <div ng-click="showReportTy('CASA')" class="mis_product">
+        <div ng-click="showReportTy('CASA')" class="mis_product">
                         <img src="img/cash-flow.png " style="width: 40px; margin-right: 10px;"> <a
                             class="mis-box-name">CASA</a>
                     </div>
-                    <div ng-click="showReportTy('OPS')" class="mis_product">
+        <div ng-click="showReportTy('OPS')" class="mis_product">
                         <img src="img/risk.png" style="width: 46px; height: 50px; margin-right: 10px;"> <a
                             class="mis-box-name">OPS</a>
                     </div>
-                    <div ng-click="showReportTy('DD')" class="mis_product">
+        <div ng-click="showReportTy('DD')" class="mis_product">
                         <img src="img/check.png" style="width: 50px; height: 50px; margin-right: 10px;"> <a
                             class="mis-box-name">DD</a>
                     </div>
-                    <div ng-click="showReportTy('SMBG')" class="mis_product">
+        <div ng-click="showReportTy('SMBG')" class="mis_product">
                         <img src="img/deposit (5).png " style="width: 38px; margin-right: 10px; margin-left: 4px; "> <a
                             class="mis-box-name">SMBG</a>
                     </div>
-<!--                    <div ng-click="showReportTy('TARGET')" class="mis_product">
-                        <img src="img/money.png " style="width: 34px; margin-right: 10px;"> <a
-                           class="mis-box-name-big">LIABILITY TARGET VS ACHIEVEMENT</a>
-                    </div> -->
-                    <div ng-click="showReportTy('MATURITY')" class="mis_product">
+                    <!--                    <div ng-click="showReportTy('TARGET')" class="mis_product">
+                                            <img src="img/money.png " style="width: 34px; margin-right: 10px;"> <a
+                                               class="mis-box-name-big">LIABILITY TARGET VS ACHIEVEMENT</a>
+                                        </div> -->
+        <div ng-click="showReportTy('MATURITY')" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">MATURITY TRACKER</a>
                     </div>
-                    <div ng-click="showReportTy('HR')" class="mis_product">
+        <div ng-click="showReportTy('HR')" class="mis_product">
                         <img src="img/money-transfer.png " style="width: 40px; height: 40px; margin-right: 10px;  margin-left: 4px; " > <a
                             class="mis-box-name">HR</a>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -162,8 +165,8 @@
                 <form ng-submit="getReportData()">
                     <div class="flex_viewReport mt-2 ml-2">
                         <div class="mr-auto">
-                            <h3 class="ml-4  underline-offset-1  text-4xl font-semibold text-white inline-block font-Roboto">
-                            {{reportTypeForDashboard}} REPORT</h3>
+                            <h5 class="ml-4  underline-offset-1  text-2xl font-semibold text-white inline-block font-Roboto">
+        {{reportTypeForDashboard}} REPORT</h5>
                         </div>
 
                         <div class="mt-3">
@@ -171,7 +174,7 @@
                         </div>
                         <div class="ml-2 mt-2">
                             <input style="display: inline-block; width:100%" type="date" class="form-control"
-                            id="datepicker" name="datepicker" ng-model="uploadDate">
+        id="datepicker" name="datepicker" ng-model="uploadDate">
                         </div>
                         <div class="ml-2 mt-2 mr-3">
                             <button type="submit" style="margin-top: 1px;"

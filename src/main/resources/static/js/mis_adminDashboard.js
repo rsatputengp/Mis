@@ -2,7 +2,7 @@
          .controller('dashboardController', function ($scope, $http, $location) {
 
 
-             $scope.userRecord = JSON.parse(window.localStorage.getItem("user"));
+             $scope.userRecord = JSON.parse(window.localStorage.getItem("AdminUser"));
              var protocal = window.location.protocol;
              var host = window.location.host;
              $scope.uRl = protocal + "//" + host + "/";
