@@ -21,7 +21,6 @@
                  $scope.showCH = false;
                  $scope.showCASA = false;
                  $scope.showMaturity = false;
-                 $scope.showTarget = false;
                  $scope.showFDRD = false;
                  $scope.showDD = false;
                  $scope.showOPS = false;
@@ -39,7 +38,6 @@
                          $scope.showCH = true;
                          $scope.showCASA = false;
                          $scope.showMaturity = false;
-                         $scope.showTarget = false;
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = false;
@@ -50,7 +48,6 @@
                          $scope.showCH = false;
                          $scope.showCASA = true;
                          $scope.showMaturity = false;
-                         $scope.showTarget = false;
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = false;
@@ -59,7 +56,6 @@
                          $scope.showCH = false;
                          $scope.showCASA = false;
                          $scope.showMaturity = false;
-                         $scope.showTarget = false;
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = true;
@@ -68,7 +64,6 @@
                          $scope.showCH = false;
                          $scope.showCASA = false;
                          $scope.showMaturity = false;
-                         $scope.showTarget = false;
                          $scope.showFDRD = false;
                          $scope.showDD = true;
                          $scope.showOPS = false;
@@ -77,7 +72,6 @@
                          $scope.showCH = false;
                          $scope.showCASA = false;
                          $scope.showMaturity = false;
-                         $scope.showTarget = false;
                          $scope.showFDRD = true;
                          $scope.showDD = false;
                          $scope.showOPS = false;
@@ -86,7 +80,6 @@
                          $scope.showCH = false;
                          $scope.showCASA = false;
                          $scope.showMaturity = false;
-                         $scope.showTarget = true;
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = false;
@@ -95,7 +88,6 @@
                          $scope.showCH = false;
                          $scope.showCASA = false;
                          $scope.showMaturity = true;
-                         $scope.showTarget = false;
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = false;
@@ -105,7 +97,6 @@
                          $scope.showCH = false;
                          $scope.showCASA = false;
                          $scope.showMaturity = false;
-                         $scope.showTarget = false;
                          $scope.showFDRD = false;
                          $scope.showDD = false;
                          $scope.showOPS = false;
