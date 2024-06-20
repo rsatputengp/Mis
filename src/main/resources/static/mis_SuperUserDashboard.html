@@ -39,7 +39,9 @@ and open the template in the editor.
         <!-- navbar -->
         <nav class=" bg-slate-600 flex justify-between items-center h-14 text-black-300 text-lg">
             <div class="text-slate-50 cursor-pointer">
-                <a class="ml-3 text-xl font-semibold text-slate-50 focus:text-slate-50">MIS Dashboard</a>
+                <a class="ml-3 text-xl font-semibold text-slate-50 focus:text-slate-50" ng-click="reloadPage()">
+                    <img src="img/MIS Logo 03.png" style="cursor: pointer; width: 86px; height: 44px; margin-left: 20px; margin-top: -25px;" alt=""/>
+                </a>
             </div>
             <div> 
                 <span class="userName mr-3 text-sm">User : {{userRecord.branchCode}}</span>
