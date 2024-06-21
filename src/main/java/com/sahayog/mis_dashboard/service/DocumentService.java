@@ -25,16 +25,18 @@ public class DocumentService {
 
     // Create operation
     public Document saveDocument(Document document) {
+        
+        Document documentUp = new Document();
         Document documentData
                 = getDocumentByreportTypeAndDate(document.getReportType(), document.getDate());
-        if (documentData != null) {
-            documentData.setDate(document.getDate());
-            documentData.setReportName(document.getReportName());
-            documentData.setReportType(document.getReportType());
-            documentData.setSheetLink(document.getSheetLink());
-            return documentRepository.save(documentData);
+        if (documentData == null) {
+            documentUp.setDate(document.getDate());
+            documentUp.setReportName(document.getReportName());
+            documentUp.setReportType(document.getReportType());
+            documentUp.setSheetLink(document.getSheetLink());
+            return documentRepository.save(documentUp);
         } else {
-            return documentRepository.save(document);
+            return documentData;
         }
     }
 

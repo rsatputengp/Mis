@@ -59,7 +59,7 @@ and open the template in the editor.
                             <label class="labelForAdmin" for="inputGroupSelect01">Select Report Type :</label>
 
                             <select class="custom-select" id="inputGroupSelect01" ng-model="selectedReportType"
-                                    ng-options="option for option in options">
+                                    ng-options="option for option in options" required="">
                                 <option value="" disabled selected> ---select--- </option>
                             </select>
                         </div>
@@ -68,14 +68,14 @@ and open the template in the editor.
                             <label class="labelForAdmin" for="inputGroupSelect01">Select Date :</label>
 
                             <input style="display: inline-block; width:100%" type="date" class="form-control"
-                                   id="admin_datepicker" name="datepicker" ng-model="uploadDate">
+                                   id="admin_datepicker" name="datepicker" ng-model="uploadDate" required="">
                         </div>
 
                         <div class="form-group" >
                             <label class="labelForAdmin" for="inputGroupSelect01">Enter Excel Sheet Link :</label>
 
                             <input style="display: inline-block; width:100%" type="text" class="form-control"
-                                   id="sheet_link" name="enter url" ng-model="sheetLink">
+                                   id="sheet_link" name="enter url" ng-model="sheetLink" required="">
                         </div>
 
                         <button type="submit"

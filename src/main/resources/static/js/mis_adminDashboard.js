@@ -185,7 +185,7 @@
 
                  $scope.logout = function () {
                      alert("Logout Successfully.");
-                     window.localStorage.removeItem("user");
+                     window.localStorage.removeItem("AdminUser");
                      window.location.href = $scope.uRl + "index.html";
                  };
 
