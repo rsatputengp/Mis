@@ -60,7 +60,7 @@
 
          $scope.updateExcelLink = function () {
              debugger;
-             if ($scope.validLink()) {
+             if ($scope.checkForAllFileds() && $scope.validLink()) {
 
                  if ($scope.date === "") {
                      $scope.date = $scope.uploadDate;
@@ -127,13 +127,30 @@
 
 
          $scope.validLink = function () {
-             var link = $scope.sheetLink;
-             const count = link.split("http").length - 1;
-             if (count === 1) {
-                 return true;
+             if ($scope.sheetLink) {
+
+                 var link = $scope.sheetLink;
+                 const count = link.split("http").length - 1;
+                 if (count === 1) {
+                     return true;
+                 } else {
+                     alert("Link is not  valid.");
+                     return false;
+                 }
+             }
+         };
+
+         $scope.checkForAllFileds = function () {
+             if (!$scope.uploadDate || !$scope.sheetLink) {
+                 if (!$scope.uploadDate) {
+                     alert("please select the date.");
+                     return false;
+                 } else if (!$scope.sheetLink) {
+                     alert("please enter the link.");
+                     return false;
+                 }
              } else {
-                 alert("Link is not  valid.");
-                 return false;
+                 return true;
              }
          };
 
@@ -155,4 +172,21 @@
          window.location.href = $scope.uRl + "index.html";
      }
 
- });   
+ });
+
+ app.filter('continuousSubstringFilter', function () {
+     return function (list, search, columns) {
+         if (!search) {
+             return list;
+         }
+
+         search = search.toLowerCase();
+
+         return list.filter(function (record) {
+             return columns.some(function (column) {
+                 var columnValue = record[column] && record[column].toString().toLowerCase();
+                 return columnValue && columnValue.includes(search);
+             });
+         });
+     };
+ });

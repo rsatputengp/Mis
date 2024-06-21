@@ -91,7 +91,12 @@ and open the template in the editor.
         <div class="popup-overlay" ng-class="{show: isPopupVisible}">
             <div class="popup">
                 <span class="close-btn" ng-click="closePopup()">×</span>
-                <h2>Data Table</h2><br>
+                <div class="form-group has-search ml-md-auto">
+                    <span class="form-control-feedback">
+                        <img class="list-icon" src="img/search_bar.png" alt=""/>
+                    </span>
+                    <input  type="text" class="form-controlx" placeholder="Search" ng-model="search">
+                </div>
                 <table class="table-responsive"> 
                     <thead>
                         <tr>
@@ -102,7 +107,7 @@ and open the template in the editor.
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="sheetdata in sheetData">
+                        <tr ng-repeat="sheetdata in sheetData| continuousSubstringFilter:search:['date','reportName','sheetLink']">
                             <td ng-click="editView(sheetdata.id)">{{ $index+1 }}</td>
                             <td>{{ sheetdata.date }}</td>
                             <td>{{ sheetdata.reportName }}</td>
