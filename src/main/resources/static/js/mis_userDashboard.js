@@ -102,7 +102,7 @@
                          $scope.showOPS = false;
                          $scope.showHR = true;
 
-                     }else {
+                     } else {
                          alert("Something Went Wrong");
                      }
 
@@ -131,46 +131,49 @@
                      location.reload();
                  };
                  $scope.getReportData = function () {
-                     debugger;
-                     $scope.sheetLink = "";
+                     if ($scope.uploadDate) {
+                         debugger;
+                         $scope.sheetLink = "";
 //                    var month = $scope.uploadDate.getMonth() + 1;
 //                    var date = month.toString() +
 //                            "-" + $scope.uploadDate.getFullYear().toString();
-                     var inputdate = new Date($scope.uploadDate);
-                     $scope.day = inputdate.getDate();
-                     $scope.month = inputdate.getMonth() + 1;
-                     $scope.year = inputdate.getFullYear();
-                     $scope.date = $scope.day.toString() + "-" + $scope.month.toString() + "-" + $scope.year.toString();
-                     alert($scope.date);
-                     var URL = "documents/getDocumentByreportTypeAndDate/"
-                             + $scope.reportTypeForDashboard + "/" + $scope.date;
+                         var inputdate = new Date($scope.uploadDate);
+                         $scope.day = inputdate.getDate();
+                         $scope.month = inputdate.getMonth() + 1;
+                         $scope.year = inputdate.getFullYear();
+                         $scope.date = $scope.day.toString() + "-" + $scope.month.toString() + "-" + $scope.year.toString();
+                         alert($scope.date);
+                         var URL = "documents/getDocumentByreportTypeAndDate/"
+                                 + $scope.reportTypeForDashboard + "/" + $scope.date;
 
-                     $http.get($scope.uRl + URL)
-                             .then(function (response) {
-                                 $scope.sheetLink = response.data.sheetLink;
-                                 var excelLink = $scope.sheetLink;
-                                 console.log(excelLink);
-                                 var embeddedExcel = document.getElementById('embeddedExcel');
+                         $http.get($scope.uRl + URL)
+                                 .then(function (response) {
+                                     $scope.sheetLink = response.data.sheetLink;
+                                     var excelLink = $scope.sheetLink;
+                                     console.log(excelLink);
+                                     var embeddedExcel = document.getElementById('embeddedExcel');
 
-                                 // // Clear previous content
-                                 embeddedExcel.innerHTML = '';
+                                     // // Clear previous content
+                                     embeddedExcel.innerHTML = '';
 
-                                 // // Create iframe element
-                                 var iframe = document.createElement('iframe');
-                                 iframe.setAttribute('src', excelLink);
-                                 iframe.setAttribute('width', '100%');
-                                 iframe.setAttribute('height', '480px');
-                                 iframe.setAttribute('frameborder', '0');
-                                 iframe.setAttribute('scrolling', 'no');
+                                     // // Create iframe element
+                                     var iframe = document.createElement('iframe');
+                                     iframe.setAttribute('src', excelLink);
+                                     iframe.setAttribute('width', '100%');
+                                     iframe.setAttribute('height', '480px');
+                                     iframe.setAttribute('frameborder', '0');
+                                     iframe.setAttribute('scrolling', 'no');
 
-                                 // Append iframe to div
-                                 embeddedExcel.appendChild(iframe);
+                                     // Append iframe to div
+                                     embeddedExcel.appendChild(iframe);
 
-                             }, function (error) {
-                                 alert("Report Not Found");
-                                 console.log(error);
-                             });
-
+                                 }, function (error) {
+                                     alert("Report Not Found");
+                                     console.log(error);
+                                 });
+                     } else {
+                         alert("please select the date.");
+                     }
 
                  };
 
