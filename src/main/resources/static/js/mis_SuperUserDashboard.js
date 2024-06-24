@@ -27,12 +27,13 @@
              'HVT', 'MATURITY TRACKER', 'LIABILITY TARGET VS ACHIEVEMENT',
              'RD SMBG PENDING', 'SMBG REGULAR', 'DD TRACKER', 'BRANCH SCORECARD',
              'BOD_EOD REGULAR', 'EMPLOYEE DATA', 'HIRING MANPOWER STATUS',
-             'BRANCHES AND ADDRESS'   ];
+             'BRANCHES AND ADDRESS'];
 //        $scope.options = ['DAILY CH', 'CASA DAILY', 'NMAB', 'CASA STAFFWISE', 'HVT', 'MATURITY TRACKER', 'LIABILITY TARGET VS ACHIEVEMENT', 'RD SMBG PENDING',
 //            'SMBG REGULAR', 'DD REGULAR', 'DD PENDING', 'DD TRACKER', 'BRANCH SCORECARD', 'BOD/EOD REGULAR'];
          // Selecting the first option initially
          $scope.selectedReportType = $scope.options[0].value;
          $scope.storeMonthAndYear = function () {
+             $scope.checkDate();
              var inputdate = new Date($scope.uploadDate);
              $scope.day = inputdate.getDate();
              $scope.month = inputdate.getMonth() + 1;
@@ -154,6 +155,22 @@
                  }
              } else {
                  return true;
+             }
+         };
+
+         // Function to check if the selected date is in the future
+         $scope.checkDate = function () {
+             if ($scope.uploadDate) {
+                 var selectedDate = new Date($scope.uploadDate);
+                 var currentDate = new Date();
+
+                 // Remove the time portion for accurate comparison
+                 selectedDate.setHours(0, 0, 0, 0);
+                 currentDate.setHours(0, 0, 0, 0);
+
+                 if (selectedDate > currentDate) {
+                     alert('The date you are choosing is a future date.');
+                 }
              }
          };
 
