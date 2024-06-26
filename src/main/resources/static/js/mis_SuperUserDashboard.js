@@ -25,7 +25,7 @@
          $scope.uploadbutton = true;
          $scope.options = ['DAILY CH', 'CASA DAILY', 'NMAB', 'CASA STAFFWISE',
              'HVT', 'MATURITY TRACKER', 'LIABILITY TARGET VS ACHIEVEMENT',
-             'RD SMBG PENDING', 'BDE COLLECTION REPORT', 'DD TRACKER', 'BRANCH SCORECARD',
+             'RD SMBG PENDING', 'BDE COLLECTION', 'DD TRACKER', 'BRANCH SCORECARD',
              'BOD_EOD REGULAR', 'EMPLOYEE DATA', 'HIRING MANPOWER STATUS',
              'BRANCHES AND ADDRESS', 'BDO COLLECTION'];
 //         $scope.options = ['DAILY CH', 'CASA DAILY', 'NMAB', 'CASA STAFFWISE',
